@@ -13,8 +13,6 @@ $a = 6;
 $b = 3;
 $c = 9;
 
-
-
 if($a > $b && $a <$c){
     echo "El valor del medio es: ".$a;
 
@@ -27,4 +25,5 @@ if($a > $b && $a <$c){
 }else if ($a == $b || $a == $c || $c == $b){
     echo "No hay valor del medio";
 }
+
 ?>
