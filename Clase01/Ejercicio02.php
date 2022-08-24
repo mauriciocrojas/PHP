@@ -56,10 +56,10 @@ año es. Utilizar una estructura selectiva múltiple.
             }
             break;
         case "07":
-            echo "Es invierno";
+            echo "Invierno";
             break;
         case "08":
-            echo "Es invierno";
+            echo "Invierno";
             break;
         case "09":
             if($dia >= 21){
