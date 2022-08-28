@@ -30,16 +30,13 @@ $indice = 1;
 echo "<br>";
 
 for ($i = 0; $i < count($impares); $i++){
-    echo $indice. ") ". $impares[$i]. "<br>";
-    $indice++;
+    echo $indice++. ") ". $impares[$i]. "<br>";
 }
 $indice = 1;
 echo "<br>";
 
 while($indice <= 10){
-    echo $indice. ") ". $impares[$indice2]. "<br>";
-    $indice++;
-    $indice2++;
+    echo $indice++. ") ". $impares[$indice2++]. "<br>";
 }
 
 ?>
