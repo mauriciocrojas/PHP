@@ -13,8 +13,6 @@ $impares = array();
 $num = 0;
 
 $indice = 1;
-$indice2 = 0;
-
 
 while(count($impares) < 10){
     $num++;
@@ -36,7 +34,7 @@ $indice = 1;
 echo "<br>";
 
 while($indice <= 10){
-    echo $indice++. ") ". $impares[$indice2++]. "<br>";
+    echo $indice++. ") ". $impares[$indice-2]. "<br>";
 }
 
 ?>
