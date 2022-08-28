@@ -9,8 +9,21 @@
 // Mauricio Rojas
 // Ej 6
 
+$numeros = array(rand(1, 10), rand(1, 10), rand(1, 10), rand(1, 10), rand(1, 10));
+$acum = 0;
 
 
+foreach ($numeros as $num){
+    echo $num."<br>";
+    $acum += $num;
+}
 
+if(($acum / 5) < 6){
+    echo "El promedio es menor a 6, y es:". ($acum / 5);
+}else if(($acum / 5) > 6){
+    echo "El promedio es mayor a 6, y es:". ($acum / 5);
+}else{
+    echo "El promedio es 6";
+}
 
 ?>

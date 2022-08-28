@@ -9,8 +9,37 @@
 // Mauricio Rojas
 // Ej 7
 
+$impares = array();
+$num = 0;
+
+$indice = 1;
+$indice2 = 0;
 
 
+while(count($impares) < 10){
+    $num++;
+    if($num % 2 != 0){
+        $impares[] = $num;
+    }
+}
 
+foreach ($impares as $valor){
+    echo $indice++. ") ". $valor. "<br>";
+}
+$indice = 1;
+echo "<br>";
+
+for ($i = 0; $i < count($impares); $i++){
+    echo $indice. ") ". $impares[$i]. "<br>";
+    $indice++;
+}
+$indice = 1;
+echo "<br>";
+
+while($indice <= 10){
+    echo $indice. ") ". $impares[$indice2]. "<br>";
+    $indice++;
+    $indice2++;
+}
 
 ?>
