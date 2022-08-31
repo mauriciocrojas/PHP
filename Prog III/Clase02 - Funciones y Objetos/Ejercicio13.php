@@ -16,29 +16,27 @@ Ej 13
 $palabra = "Parcial";
 $max = 8;
 
-function tope ($palabra, $max){
-    
+function tope($palabra, $max)
+{
+
     $rta = "";
 
-    if(strlen($palabra) < $max){
+    if (strlen($palabra) < $max) {
 
-        $lista = array ("Recuperatorio", "Parcial", "Programacion");
+        $lista = array("Recuperatorio", "Parcial", "Programacion");
 
-        foreach($lista as $dato){
-            if($palabra == $dato){
+        foreach ($lista as $dato) {
+            if ($palabra == $dato) {
                 $rta = "1. La palabra se encuentra en el listado";
-                return $rta; 
-            }else{
+                return $rta;
+            } else {
                 $rta = "0. La palabra no se encuentra en el listado";
             }
         }
-
-    }else {
+    } else {
         $rta = "La palabra es mayor al máximo permitido";;
     }
     return $rta;
 }
 
 echo tope($palabra, $max);
-
-?>

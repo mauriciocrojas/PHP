@@ -59,17 +59,9 @@ class Auto
         $this->_fecha = $_fecha;
     }
 
-    // Crear el método de instancia “Equals” que permita comparar dos objetos de tipo “Auto”. Sólo
-    // devolverá TRUE si ambos “Autos” son de la misma marca.
-    // Crear un método de clase, llamado “Add” que permita sumar dos objetos “Auto” (sólo si son
-    // de la misma marca, y del mismo color, de lo contrario informarlo) y que retorne un Double con
-    // la suma de los precios o cero si no se pudo realizar la operación.
-    // Ejemplo: $importeDouble = Auto::Add($autoUno, $autoDos);
-
-
     public function AgregarImpuestos(float $impuesto)
     {
-        $this->_precio += $impuesto;
+        return $this->_precio += $impuesto;
     }
 
     public static function MostrarAuto(Auto $auto)
@@ -80,10 +72,17 @@ class Auto
 
     public function Equals(Auto $auto1, Auto $auto2)
     {
-        if(!strcmp($auto1->_marca, $auto2->_marca)){
-            return "Los autos poseen la misma marca <br><br>";
-        }else{
-            return "Los autos no son de la misma marca<br><br>";
-        }
+        //     if(!strcmp($auto1->_marca, $auto2->_marca)){
+        //         return "Los autos poseen la misma marca <br><br>";
+        //     }else{
+        //         return "Los autos no son de la misma marca<br><br>";
+        //     }
+        return $auto1->_marca == $auto2->_marca;
+    }
+
+
+    public function Add(Auto $auto1, Auto $auto2)
+    {
+        return $this->Equals($auto1, $auto2) ? $_precioAuto1y2 = ($auto1->_precio + $auto2->_precio) : " No se puede realizar la suma ya que las marcas no son iguales<br>";
     }
 }

@@ -9,17 +9,15 @@ Rojas Mauricio
 Ej 12
 */
 
-$palabra = array('H','O','L','A');
+$palabra = array('H', 'O', 'L', 'A');
 
 
-function invertirChar($palabra){
-    for($i = count($palabra) - 1 ; $i >= 0; $i--){
-         
-            echo $palabra[$i];
-        
+function invertirChar($palabra)
+{
+    for ($i = count($palabra) - 1; $i >= 0; $i--) {
+
+        echo $palabra[$i];
     }
 }
 
 invertirChar($palabra);
-
-?>
