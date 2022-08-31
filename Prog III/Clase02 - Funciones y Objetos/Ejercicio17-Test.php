@@ -42,8 +42,9 @@ echo "Precio auto 2 con primer impuesto: $" . $auto2->AgregarImpuestos(1500) . "
 echo "Precio auto 3 sin impuestos: $" . $auto3->_precio . "<br>";
 echo "Precio auto 3 con primer impuesto: $" . $auto3->AgregarImpuestos(1500) . "<br><br>";
 
-echo "Auto 1 + Auto 2 con primer impuesto: $" . ($auto1->Add($auto1, $auto2)) . "<br>";
+echo "Auto 1 + Auto 2 con primer impuesto: $" . ($auto1->Add($auto1, $auto2));
 echo "Auto 2 + Auto 3 con primer impuesto: $" . ($auto1->Add($auto2, $auto3)) . "<br>";
+echo "Auto 1 + Auto 2 con segundo impuesto: $" . ($auto1->AgregarImpuestos(1500) + $auto2->AgregarImpuestos(1500)) . "<br><br>";
 
-echo "Auto 1 + Auto 2 con segundo impuesto: $" . ($auto1->AgregarImpuestos(1500) + $auto2->AgregarImpuestos(1500));
-echo "Auto 2 + Auto 3 con primer impuesto: $" . ($auto1->Add($auto2, $auto3)) . "<br>";
+echo "Precio auto 2 con segundo impuesto: $" . $auto2->AgregarImpuestos(1500) . "<br>";
+echo "Auto 2 con segundo impuesto + Auto 3 con primer impuesto: $" . ($auto1->Add($auto2, $auto3)) . "<br>";
