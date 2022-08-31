@@ -28,7 +28,6 @@ function tope ($palabra, $max){
             if($palabra == $dato){
                 $rta = "1. La palabra se encuentra en el listado";
                 return $rta; 
-                break;
             }else{
                 $rta = "0. La palabra no se encuentra en el listado";
             }
