@@ -40,3 +40,5 @@ function tope ($palabra, $max){
 }
 
 echo tope($palabra, $max);
+
+?>

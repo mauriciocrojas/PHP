@@ -37,33 +37,53 @@ resultado obtenido.
 ● Comparar el primer “Auto” con el segundo y quinto objeto e informar si son iguales o
 no.
 ● Utilizar el método de clase “MostrarAuto” para mostrar cada los objetos impares (1, 3, 5)
+
+Rojas Mauricio
+Ej 17
 */
 
 
-class Auto {
+class Auto
+{
 
-private $_color;
-private $_precio;
-private $_marca;
-private $_fecha;
+    public $_color;
+    public $_precio;
+    public $_marca;
+    public $_fecha;
 
-// i. La marca y el color.
-// ii. La marca, color y el precio.
-// iii. La marca, color, precio y fecha
+    public function __construct($_marca, $_color, $_precio = 0, $_fecha = "Sin especificar")
+    {
+        $this->_marca = $_marca;
+        $this->_color = $_color;
+        $this->_precio = $_precio;
+        $this->_fecha = $_fecha;
+    }
 
-public function __constructor($_marca, $_color, $_precio, $_fecha){
-    $this->_marca = $_marca;
-    $this->_color = $_color;
-    $this->_precio = $_precio;
-    $this->_fecha = $_fecha;
+    // Crear el método de instancia “Equals” que permita comparar dos objetos de tipo “Auto”. Sólo
+    // devolverá TRUE si ambos “Autos” son de la misma marca.
+    // Crear un método de clase, llamado “Add” que permita sumar dos objetos “Auto” (sólo si son
+    // de la misma marca, y del mismo color, de lo contrario informarlo) y que retorne un Double con
+    // la suma de los precios o cero si no se pudo realizar la operación.
+    // Ejemplo: $importeDouble = Auto::Add($autoUno, $autoDos);
+
+
+    public function AgregarImpuestos(float $impuesto)
+    {
+        $this->_precio += $impuesto;
+    }
+
+    public static function MostrarAuto(Auto $auto)
+    {
+        $cadena = "Marca: " . $auto->_marca . ", Color: " . $auto->_color . ", Precio: " . $auto->_precio . ", Fecha compra: " . $auto->_fecha . "<br><br>";
+        return $cadena;
+    }
+
+    public function Equals(Auto $auto1, Auto $auto2)
+    {
+        if(!strcmp($auto1->_marca, $auto2->_marca)){
+            return "Los autos poseen la misma marca <br><br>";
+        }else{
+            return "Los autos no son de la misma marca<br><br>";
+        }
+    }
 }
-
-
-
-}
-
-
-
-
-
-?> 
