@@ -66,11 +66,11 @@ class Auto
 
     public static function MostrarAuto(Auto $auto)
     {
-        $cadena = "Marca: " . $auto->_marca . ", Color: " . $auto->_color . ", Precio: " . $auto->_precio . ", Fecha compra: " . $auto->_fecha . "<br><br>";
+        $cadena = "Marca: " . $auto->_marca . ", Color: " . $auto->_color . ", Precio: " . $auto->_precio . ", Fecha compra: " . $auto->_fecha . "<br>";
         return $cadena;
     }
 
-    public function Equals(Auto $auto1, Auto $auto2)
+    public function EqualsMarca(Auto $auto1, Auto $auto2)
     {
         //     if(!strcmp($auto1->_marca, $auto2->_marca)){
         //         return "Los autos poseen la misma marca <br><br>";
@@ -80,9 +80,17 @@ class Auto
         return $auto1->_marca == $auto2->_marca;
     }
 
+    public function Equals(Auto $auto1, Auto $auto2){
+
+        return $auto1 == $auto2;
+    }
 
     public function Add(Auto $auto1, Auto $auto2)
     {
-        return $this->Equals($auto1, $auto2) ? $_precioAuto1y2 = ($auto1->_precio + $auto2->_precio) : " No se puede realizar la suma ya que las marcas no son iguales<br>";
+         if($this->EqualsMarca($auto1, $auto2)){
+            return ($auto1->_precio + $auto2->_precio);
+        } else{
+            return " No se puede realizar la suma ya que las marcas no son iguales<br>";
+        } 
     }
 }

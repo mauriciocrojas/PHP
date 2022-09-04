@@ -25,11 +25,11 @@ echo "<b>Auto 3:</b><br>" . Auto::MostrarAuto($auto3);
 echo "<b>Auto 4:</b><br>" . Auto::MostrarAuto($auto4);
 
 echo "<b>Comparo la marca del Auto 1 y 2: </b><br>";
-$auto1->Equals($auto1, $auto2) ? $cadena = "Los autos poseen la misma marca <br><br>" :  $cadena = "Los autos no son de la misma marca<br><br>";
+$auto1->EqualsMarca($auto1, $auto2) ? $cadena = "Los autos poseen la misma marca <br><br>" :  $cadena = "Los autos no son de la misma marca<br><br>";
 echo $cadena;
 
 echo "<b>Comparo la marca del Auto 2 y 3: </b><br>";
-$auto1->Equals($auto2, $auto3) ? $cadena = "Los autos poseen la misma marca <br><br>" :  $cadena = "Los autos no son de la misma marca<br><br>";
+$auto1->EqualsMarca($auto2, $auto3) ? $cadena = "Los autos poseen la misma marca <br><br>" :  $cadena = "Los autos no son de la misma marca<br><br>";
 echo $cadena;
 
 echo "<b> Precio de autos con y sin impuestos: </b><br>";
