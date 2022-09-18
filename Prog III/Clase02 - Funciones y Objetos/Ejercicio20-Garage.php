@@ -93,4 +93,6 @@ class Garage
         }
         return false;
     }
+
+    //Parte archivos:
 }

@@ -138,4 +138,6 @@ echo "<b>Muestro el garage La tranquera: <br></b>";
 echo  $garage1->MostrarGarage();
 
 //Parte archivos:
+echo "<br><b> Parte archivos: </b><br><br>"
+
 ?>

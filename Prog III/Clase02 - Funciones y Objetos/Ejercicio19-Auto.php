@@ -124,7 +124,7 @@ class Auto
 
     // Crear un método de clase para poder hacer el alta de un Auto, guardando los datos en un
     // archivo autos.csv.
-    public static function darDeAltaAuto($autos)
+    public static function DarDeAltaAuto($autos)
     {
         $archivo = fopen('autosEj19.csv', 'w');
         if ($archivo) {
@@ -140,7 +140,7 @@ class Auto
     // Hacer los métodos necesarios en la clase Auto para poder leer el listado desde el archivo
     // autos.csv
     // Se deben cargar los datos en un array de autos.
-    public static function leerDesdeArchivoConFread (){
+    public static function LeerDesdeArchivoConFread (){
         $archivo = fopen('autosEj19.csv', 'r');
         
         echo fread($archivo, filesize('autosEj19.csv'));
@@ -149,7 +149,7 @@ class Auto
 
     }
 
-    public static function leerDesdeArchivoConFgets()
+    public static function LeerDesdeArchivoConFgets()
     {
         $archivo = fopen('autosEj19.csv', 'r');
 
