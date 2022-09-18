@@ -91,7 +91,7 @@ class Auto
 
     public static function MostrarAuto(Auto $auto)
     {
-        $cadena = "Marca: " . $auto->_marca . ", Color: " . $auto->_color . ", Precio: " . $auto->_precio . ", Fecha compra: " . $auto->_fecha . "<br>";
+        $cadena = "Marca: " . $auto->_marca . ", Color: " . $auto->_color . ", Precio: $" . $auto->_precio . ", Fecha compra: " . $auto->_fecha . "<br>";
         return $cadena;
     }
 

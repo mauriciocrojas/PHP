@@ -1,8 +1,9 @@
 <?php
 require_once "Ejercicio19-Auto.php";
+date_default_timezone_set("America/Buenos_Aires");
 
 $auto1 = new Auto("Ford", "Negro", 5000, "12/05/2020");
-$auto2 = new Auto("Chevrolet", "Gris", 7000);
+$auto2 = new Auto("Chevrolet", "Gris", 7000, Date("d/m/Y h:m:s a"));
 $auto3 = new Auto("Chevrolet", "Amarillo", 9000);
 $auto4 = new Auto("Honda", "Dorado");
 
