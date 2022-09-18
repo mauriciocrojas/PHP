@@ -104,6 +104,12 @@ if($garage1->Add($auto1) && $garage1->Add($auto2) && $garage1->Add($auto3)){
     echo "No se agregaron auto 1, 2, y 3  al garage ya que estos ya se encuentran en el mismo<br><br>";
 }
 
+//Parte archivos:
+echo "<b> Se guardó los datos hasta el momento del garage en un archivo CSV.</b><br><br>";
+Garage::DarAltaGarage($garage1);
+//
+
+
 echo "<b>Muestro el garage La tranquera: <br></b>";
 echo  $garage1->MostrarGarage();
 
@@ -138,6 +144,12 @@ echo "<b>Muestro el garage La tranquera: <br></b>";
 echo  $garage1->MostrarGarage();
 
 //Parte archivos:
-echo "<br><b> Parte archivos: </b><br><br>"
+echo "<br><b> Parte lectura archivos: </b><br>";
+
+echo "<br><b> Con Feof y Fgets: </b><br>";
+echo Garage::LeerGarageDesdeCsvConFeofyFgets("GaragesEj20.csv");
+
+echo "<br><b> Con Fread: </b><br>";
+echo Garage::LeerGarageDesdeCsvconFread("GaragesEj20.csv");
 
 ?>
