@@ -23,7 +23,20 @@ public $_mail;
 
 public function __construct($_clave, $_mail)
 {
-    $this->_$clave
+    $this->_clave = $_clave;
+    $this->_mail = $_mail;
+}
+
+public static function ChequearUsuarioExistente($arrayDeUsuarios, $mail, $clave){
+    foreach($arrayDeUsuarios as $usuario){
+        if($usuario->_mail == $mail && $usuario->_clave == $clave){
+            return "Usuario verificado con éxito <br>";
+        }else if($usuario->_mail == $mail && $usuario->_clave != $clave){
+            return "Error en los datos <br>";
+        }else{
+            return "Usuario no registrado<br>";
+        }
+    }
 }
 
 }
