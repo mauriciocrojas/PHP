@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP PersFutProf</title>
+</head>
+<body>
+    <h4>Form Datos</h4>
+    <div id="divFormDatos">
+        <label for="optionList" >Filtrar por:</label>
+        <select id="optionList">
+            <option>Todos</option>
+        </select>
+        <br>
+        <label for="calcular" >Calcular Edad Promedio:</label>
+        <input type="text" id="calcular">
+        <input type="button" value="Calcular">
+        <br>
+        <label>Mostrar Columnas:</label>
+        <br>
+        <input type="checkbox" name="a" value="1"> ID 
+        <input type="checkbox" name="a" value="2"> Nombre 
+        <input type="checkbox" name="a" value="3"> Apellido 
+        <input type="checkbox" name="a" value="4"> Edad 
+        <input type="checkbox" name="a" value="5"> Equipo 
+        <input type="checkbox" name="a" value="6"> Posicion 
+        <input type="checkbox" name="a" value="7"> CantGoles 
+        <input type="checkbox" name="a" value="8"> Titulo 
+        <input type="checkbox" name="a" value="9"> Facultad 
+        <input type="checkbox" name="a" value="10"> AñoGrad 
+        <br>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Equipo</th>
+                <th>Posicion</th>
+                <th>CantGoles</th>
+                <th>Titulo</th>
+                <th>Facultad</th>
+                <th>AñoGrad</th>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+            </tr>           
+        </table>
+        <input type="button" value="Agregar">       
+    </div><br><br>
+    <div>
+        <form action="" method="post" name = "formabm">
+            <label>Formulario ABM</label><br>
+            <label for="id">ID: </label><input type="text" id="id"><br>
+            <label for="nombre">Nombre: </label><input type="text" id="nombre"><br>
+            <label for="apellido">Apellido: </label><input type="text" id="apellido"><br>
+            <label for="edad">Edad: </label><input type="text" id="edad"><br>
+            <label for="tipo">Tipo: </label>
+            <select name="" id="tipo">Tipo: 
+                <option>Futbolista</option>
+                <option>Profesional</option>
+            </select>
+            <br>
+            <label for="titulo">Titulo: </label><input type="text" id="titulo"><br>
+            <label for="facultad">Facultad: </label><input type="text" id="facultad"><br>
+            <label for="aniograd">Año Grad: </label><input type="text" id="aniograd"><br>
+
+        </form>
+    </div>
+</body>
+</html>
