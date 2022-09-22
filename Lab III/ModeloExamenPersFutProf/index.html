@@ -8,6 +8,13 @@
 </head>
 <body>
     <h4>Form Datos</h4>
+    <script type = "text/javascript" src="Persona.js">
+    //personas = [{"id":1, "nombre":"Marcelo", "apellido":"Luque", "edad":45, "titulo":"Ingeniero", "facultad":"UTN","añoGraduacion":2002},{"id":2, "nombre":"Ramiro", "apellido":"Escobar", "edad":35, "titulo":"Medico","facultad":"UBA", "añoGraduacion":20012},{"id":3, "nombre":"Facundo", "apellido":"Cairo", "edad":30,"titulo":"Abogado", "facultad":"UCA", "añoGraduacion":2017},{"id":4, "nombre":"Fernando", "apellido":"Nieto","edad":18, "equipo":"Independiente", "posicion":"Delantero", "cantidadGoles":7},{"id":5, "nombre":"Manuel","apellido":"Loza", "edad":20, "equipo":"Racing", "posicion":"Volante", "cantidadGoles":2},{"id":6, "nombre":"Nicolas","apellido":"Serrano", "edad":23, "equipo":"Boca", "posicion":"Arquero", "cantidadGoles":0}];
+        for (let i = 0; i<10; i++){
+            console.log(personas[i]);
+        }
+
+    </script>
     <div id="divFormDatos">
         <label for="optionList" >Filtrar por:</label>
         <select id="optionList">
@@ -20,16 +27,16 @@
         <br>
         <label>Mostrar Columnas:</label>
         <br>
-        <input type="checkbox" name="a" value="1"> ID 
-        <input type="checkbox" name="a" value="2"> Nombre 
-        <input type="checkbox" name="a" value="3"> Apellido 
-        <input type="checkbox" name="a" value="4"> Edad 
-        <input type="checkbox" name="a" value="5"> Equipo 
-        <input type="checkbox" name="a" value="6"> Posicion 
-        <input type="checkbox" name="a" value="7"> CantGoles 
-        <input type="checkbox" name="a" value="8"> Titulo 
-        <input type="checkbox" name="a" value="9"> Facultad 
-        <input type="checkbox" name="a" value="10"> AñoGrad 
+        <input type="checkbox" name="a" value="1" checked="true"> ID 
+        <input type="checkbox" name="a" value="2" checked="true"> Nombre 
+        <input type="checkbox" name="a" value="3" checked="true"> Apellido 
+        <input type="checkbox" name="a" value="4" checked="true"> Edad 
+        <input type="checkbox" name="a" value="5" checked="true"> Equipo 
+        <input type="checkbox" name="a" value="6" checked="true"> Posicion 
+        <input type="checkbox" name="a" value="7" checked="true"> CantGoles 
+        <input type="checkbox" name="a" value="8" checked="true"> Titulo 
+        <input type="checkbox" name="a" value="9" checked="true"> Facultad 
+        <input type="checkbox" name="a" value="10" checked="true"> AñoGrad 
         <br>
         <table border="1">
             <tr>
