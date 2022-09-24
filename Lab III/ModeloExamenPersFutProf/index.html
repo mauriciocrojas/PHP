@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
     <title>PP PersFutProf</title>
 </head>
 <body>
-    <h4>Form Datos</h4>
-    <script type = "text/javascript" src="Persona.js">
-    //personas = [{"id":1, "nombre":"Marcelo", "apellido":"Luque", "edad":45, "titulo":"Ingeniero", "facultad":"UTN","añoGraduacion":2002},{"id":2, "nombre":"Ramiro", "apellido":"Escobar", "edad":35, "titulo":"Medico","facultad":"UBA", "añoGraduacion":20012},{"id":3, "nombre":"Facundo", "apellido":"Cairo", "edad":30,"titulo":"Abogado", "facultad":"UCA", "añoGraduacion":2017},{"id":4, "nombre":"Fernando", "apellido":"Nieto","edad":18, "equipo":"Independiente", "posicion":"Delantero", "cantidadGoles":7},{"id":5, "nombre":"Manuel","apellido":"Loza", "edad":20, "equipo":"Racing", "posicion":"Volante", "cantidadGoles":2},{"id":6, "nombre":"Nicolas","apellido":"Serrano", "edad":23, "equipo":"Boca", "posicion":"Arquero", "cantidadGoles":0}];
-        for (let i = 0; i<10; i++){
-            console.log(personas[i]);
-        }
-
-    </script>
-    <div id="divFormDatos">
+    
+    <div class="divForm">
+        <label>Form Datos</label><br>
         <label for="optionList" >Filtrar por:</label>
         <select id="optionList">
             <option>Todos</option>
@@ -38,36 +33,43 @@
         <input type="checkbox" name="a" value="9" checked="true"> Facultad 
         <input type="checkbox" name="a" value="10" checked="true"> AñoGrad 
         <br>
-        <table border="1">
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Edad</th>
-                <th>Equipo</th>
-                <th>Posicion</th>
-                <th>CantGoles</th>
-                <th>Titulo</th>
-                <th>Facultad</th>
-                <th>AñoGrad</th>
-            </tr>
-            <tr>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-            </tr>           
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Equipo</th>
+                    <th>Posicion</th>
+                    <th>CantGoles</th>
+                    <th>Titulo</th>
+                    <th>Facultad</th>
+                    <th>AñoGrad</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>   
+            </tbody>
+            
+                    
         </table>
-        <input type="button" value="Agregar">       
-    </div><br><br>
-    <div>
-        <form action="" method="post" name = "formabm">
+        <input id="botonAgregar" type="button" value="Agregar">   
+    </div>
+    <br><br>
+    <div class="divForm">
+        <form class="form" action="" method="post" name = "formabm">
             <label>Formulario ABM</label><br>
             <label for="id">ID: </label><input type="text" id="id"><br>
             <label for="nombre">Nombre: </label><input type="text" id="nombre"><br>
@@ -82,8 +84,17 @@
             <label for="titulo">Titulo: </label><input type="text" id="titulo"><br>
             <label for="facultad">Facultad: </label><input type="text" id="facultad"><br>
             <label for="aniograd">Año Grad: </label><input type="text" id="aniograd"><br>
+            <input id="botonAgregar" type="button" value="Agregar">
+            <input id="botonAlta" type="button" value="Alta"> 
+            <input id="botonBorrar" type="button" value="Borrar">     
+            <input id="botonModificar" type="button" value="Modificar">     
+            <input id="botonCancelar" type="button" value="Cancelar">     
 
         </form>
     </div>
+
+    <script src="index.js"></script>
+    <!-- <script src="Persona.js"></script> -->
+
 </body>
 </html>
