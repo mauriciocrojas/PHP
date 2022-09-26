@@ -1,21 +1,4 @@
-const botonAgregar = document.getElementById('botonAgregar')
-
-const formulario = document.querySelector('.form')
-
-const ocultar = () => {
-    // Capturo el elemento
-    // Con el elemento capturado, acceso a style.display
-    formulario.style.display = 'none'
-}
-
-const mostrar = () => {
-    // Capturo el element
-    // Con el elemento capturado, acceso a style.display
-    formulario.style.display = 'block'
-}
-
-botonAgregar.addEventListener('click', mostrar)
-
+//Harcodeo la cabecera de la tabla creando un array con el objeto que contiene los datos de la misma
 const cabecera = [
     {
         "id": "Id",
@@ -31,6 +14,7 @@ const cabecera = [
     }
 ];
 
+//Harcodeo un array de personas
 const arrayPersonas = [
     {
         "id": 1,
@@ -88,9 +72,28 @@ const arrayPersonas = [
     }
 ];
 
-//const cantidadDePersona = personas.length
+//Capturo el botón Agregar mediante su Id (el mismo mostrará el formAbm)
+const btnAgregar = document.getElementById('btnAgregar')
 
+//Capturo formAbm mediante su clase
+const formulario = document.querySelector('.formAbm')
 
+//Oculta el formAbm (en desuso)
+const ocultar = () => {
+    // Con el elemento capturado, accedo a style.display
+    formulario.style.display = 'none'
+}
+
+//Muestra el formAbm
+const mostrar = () => {
+    // Con el elemento capturado, accedo a style.display
+    formulario.style.display = 'block'
+}
+
+//Capturo el evento click del botón agregar, y le paso la función para que muestre el formAbm
+btnAgregar.addEventListener('click', mostrar)
+
+//Ejemplo map
 // const personade45 = personas.map((persona)=>{
 //     if(persona.edad == 45) {
 //         return persona
@@ -98,77 +101,51 @@ const arrayPersonas = [
 // })
 
 
-// Identificar los thead, 
-// personas.forEach((persona) => {
-//     const tr = document.createElement('tr')
-
-//     for (const key in persona) {
-//         const td = document.createElement('td')
-//         td.innerHTML = persona[key]
-//         tr.appendChild(td)
-//     }
-
-//     data.appendChild(tr)
-// })
-
-
-
-// const createTh = (cabecera) => {
-
-//     const dataThead = document.querySelector('#dataThead')
-//         let th;
-//         for (const key in cabecera) {
-//             const th = document.createElement('th')
-//             th.innerHTML = cabecera[key]
-//             th.id = key
-//             dataThead.appendChild(th)
-
-//         }
-
-//         return th;
-// }
-
-const createTh2 = (array) => {
-    const dataThead = document.querySelector('#dataThead')
+//Función que crea la cabecera con sus datos respectivos (retorna una lista con los objetos)
+const crearCabecera = (array) => {
 
     const listHead = array.map((campoCabecera) => {
 
+        const tr = document.createElement('tr')
+
         let th;
-        //let thacum;
 
         for (const key in campoCabecera) {
             th = document.createElement('th')
             th.innerHTML = campoCabecera[key]
             th.id = key
-            //thacum += key;
 
-            // if (key === "id") {
+            tr.id = 0;
 
-            //     th.id = campoCabecera[key]
-            // }
-            dataThead.appendChild(th)
+            tr.appendChild(th)
+
+            const dataThead = document.querySelector('#dataThead')
+
+            dataThead.appendChild(tr)
 
         }
-        return th
+        return tr
     })
 
     return listHead
 }
 
-let listaHead = createTh2(cabecera);
+//Guardo la lista de cabecera
+let listaHead = crearCabecera(cabecera);
 
+//Consologueo la lista de cabecera para confirmar sus datos
 listaHead.forEach(elemento => {
     console.log(elemento);
 });
 
-for (key in listaHead) {
-    console.log(key);
-}
 
+//Función que crea las filas con sus datos respectivos (retorna una lista con los objetos)
+const crearFilas = (array) => {
 
-const createListByArray = (array) => {
     const listCampos = array.map((persona) => {
+
         const tr = document.createElement('tr')
+
         let td;
 
         for (const key in persona) {
@@ -192,16 +169,18 @@ const createListByArray = (array) => {
     return listCampos
 }
 
-// UTILIZACION (DEVUELVE UN ARRAY DE ELEMENTOS)
-let listCampos = createListByArray(arrayPersonas)
 
-// DEBE RECORERSE PARA MOSTRARSE
+//Guardo la lista de filas
+let listCampos = crearFilas(arrayPersonas)
+
+//Consologueo la lista de filas para confirmar sus datos
 listCampos.forEach(element => {
     console.log(element)
 });
 
 
-const calcularEdadPromedio = (array) => {
+//Calculo promedio edad genérico
+const calculaEdadPromedio = (array) => {
     let acumEdad = 0;
 
     array.forEach(persona => {
@@ -217,11 +196,12 @@ const calcularEdadPromedio = (array) => {
     return (acumEdad / array.length);
 }
 
-
+//Función que muestra el promedio de edad en el text box tbEdadPromedio
 const mostrarEdadPromedio = () => {
-    document.getElementById('tbEdadPromedio').value = calcularEdadPromedio(arrayPersonas);
+    document.getElementById('tbEdadPromedio').value = calculaEdadPromedio(arrayPersonas);
 }
 
+//Capturo el botón Calcular Edad Promedio, y le digo que cuando reciba un click, llame a la función mostrarEdadPromedio
 let botonCalcularEdadPromedio = document.getElementById('btnCalcularEdadPromedio');
 botonCalcularEdadPromedio.addEventListener('click', mostrarEdadPromedio);
 

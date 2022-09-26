@@ -3,14 +3,18 @@ body{
 }
 
 
-.divForm{
+.divFormDatos{
     border: 3px solid;
     border-color: coral;
+    display: block;
 }
 
-.form{
+.formAbm{
+    border: 3px solid;
+    border-color: coral;
     display: none;
 }
+
 
 
 /* table, td, tr{
