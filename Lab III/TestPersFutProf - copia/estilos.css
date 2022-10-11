@@ -16,14 +16,7 @@ body{
 }
 
 
-th{
-    background-color:rgb(196, 134, 255);
-}
 
-tr{
-    background-color: bisque;
-}
-
-.AAA{
-    display: none;
-}
+/* table, td, tr{
+    border: 2px solid;
+} */

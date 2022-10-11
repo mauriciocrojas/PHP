@@ -157,7 +157,6 @@ const crearFilas = (array) => {
 
                 tr.id = persona[key]
             }
-
             tr.appendChild(td)
 
             const dataTbody = document.querySelector('#dataTbody')
